@@ -3,20 +3,18 @@
 body {
     cursor: url('/assetsScreen1/cursor.png'), auto;    
     background: #f7e1ba;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
+    font-size: 2vw;
 }
 
 p {
-    margin-top: 8vh;
+    margin-top: 10vh;
     font-family: "assistant", sans-serif;
-    font-size: 2.2vw;
+    font-size: 3vw;
     color: black;
     text-align: center;
-    margin-bottom: 2vh;
+    margin-bottom: 2.5vh;
 }
 
 .digestingBtn {
@@ -26,11 +24,11 @@ p {
     color: white;
     text-align: center;
     cursor: pointer;
-    font-size: 1.8vw;
-    border-radius: 2em;
-    padding: 0.8em 2em;
+    font-size: 2vw;
+    border-radius: 2.5vw;
+    padding: 1vh 5vw;
     transition: background-color 200ms;
-    margin: 6vh auto;
+    margin: 8vh auto;
     display: block;
 }
 
@@ -63,19 +61,21 @@ p {
 }
 
 .topnav {
-    padding: 2vh 2vw;
+    overflow: hidden;
 }
 
 .topnav a {
     font-family: "assistant", sans-serif;
-    margin-right: 1vw;
-    border-radius: 2em;
+    margin-top: 2.5vh;
+    margin-left: 2.5vw;
+    margin-right: 0.3vw;
+    border-radius: 3.75vw;
+    float: left;
     color: #EF7828;
     text-align: center;
-    padding: 0.5em 1em;
+    padding: 0.25vh 0.625vw;
     text-decoration: none;
-    font-size: 1.2vw;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.25vw;
 }
 
 .topnav a:hover {
@@ -85,47 +85,56 @@ p {
 
 .top-right-image {
     position: absolute;
-    top: 8vh;
-    right: 5vw;
-    width: 18vw;
-    max-width: 300px;
+    top: 0.25vh;
+    right: 1.375vw;
+    width: 20vw;
     height: auto;
     transform: rotate(7deg);
 }
 
 .bottom-left-image {
     position: absolute;
-    bottom: 8vh;
-    left: 5vw;
-    width: 18vw;
-    max-width: 300px;
+    bottom: 12.375vh;
+    left: 15.875vw;
+    width: 20vw;
     height: auto;
     transform: rotate(-13deg);
 }
 
-.topRow, .bottomRow {
+.topRow {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 5vh;
+    margin-top: 18.75vh;
+    padding: 0 27.25vw;
 }
 
-.topRow img, .bottomRow img {
-    width: 5vw;
-    height: auto;
-    margin: 1vh 1vw;
+.topRow img {
+    max-width: 45.25vw;
+    height: 15.25vh;
+    margin-left: 1vw;
+}
+
+.bottomRow {
+    display: flex;
+    margin-top: 3.75vh;
+    padding: 0 16.875vw;
+}
+
+.bottomRow img {
+    max-width: 78.25vw;
+    height: 15.875vh;
+    margin-left: 1vw;
 }
 
 .stage1Paragraph {
     font-family: "assistant", sans-serif;
-    font-size: 1.8vw;
+    font-size: 2vw;
     color: #EF7828;
     text-align: left;
-    margin: 5vh auto 2vh;
-    max-width: 80%;
+    margin-top: 10vh;
+    margin-bottom: 5.5vh;
+    margin-left: 32.5vw;
     word-wrap: break-word;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .nextStageBtn {
@@ -135,12 +144,13 @@ p {
     color: white;
     text-align: center;
     cursor: pointer;
-    font-size: 1.6vw;
-    border-radius: 2em;
+    font-size: 1.75vw;
+    border-radius: 1.25vw;
     transition: background-color 200ms;
-    margin: 2vh auto;
+    margin: 0 45vw;
     display: block;
-    padding: 0.8em 1.5em;
+    width: 18.75vw;
+    height: 4.5vh;
     white-space: nowrap;
     font-weight: 400;
 }
@@ -151,11 +161,10 @@ p {
 }
 
 .image-container {
-    margin: 4vh auto;
+    margin: 5.625vh 34.875vw;
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
+    width: 33.75vw;
+    height: 37.5vh;
     animation: shake 2s infinite;
 }
 
@@ -165,7 +174,6 @@ p {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
     transition: opacity 0.6s ease-in-out;
 }
 
@@ -175,56 +183,4 @@ p {
 
 .image-container:hover .top-image {
     opacity: 1;
-}
-
-@media screen and (max-width: 1200px) {
-    body {
-        font-size: 14px;
-    }
-
-    p {
-        font-size: 2.5vw;
-    }
-
-    .digestingBtn, .nextStageBtn {
-        font-size: 2vw;
-    }
-
-    .stage1Paragraph {
-        font-size: 2.2vw;
-    }
-
-    .topnav a {
-        font-size: 1.5vw;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 12px;
-    }
-
-    p {
-        font-size: 3vw;
-    }
-
-    .digestingBtn, .nextStageBtn {
-        font-size: 2.5vw;
-    }
-
-    .stage1Paragraph {
-        font-size: 2.8vw;
-    }
-
-    .topnav a {
-        font-size: 2vw;
-    }
-
-    .top-right-image, .bottom-left-image {
-        width: 25vw;
-    }
-
-    .image-container {
-        width: 90%;
-    }
 }
